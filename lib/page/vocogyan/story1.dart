@@ -3,19 +3,21 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loginuicolors/page/TalkWithVoC/talkVoCop2.dart';
-import 'package:loginuicolors/page/TalkWithVoC/talkVoCop3.dart';
+// import 'package:loginuicolors/page/TalkWithVoC/talkVoCop2.dart';
+// import 'package:loginuicolors/page/TalkWithVoC/talkVoCop3.dart';
 import 'package:loginuicolors/page/home.dart';
+import 'package:loginuicolors/page/ui/comingsoon.dart';
+import 'package:loginuicolors/page/vocogyan/tech/ch1.dart';
 
-class Talkwithvoco1 extends StatefulWidget {
-  const Talkwithvoco1({Key? key}) : super(key: key);
+class vocogyan extends StatefulWidget {
+  const vocogyan({Key? key}) : super(key: key);
 
   @override
-  _tackwithvoco1WidgetState createState() => _tackwithvoco1WidgetState();
+  _vocogyan createState() => _vocogyan();
   // _Demo2WidgetState createState() => _Demo2WidgetState();
 }
 
-class _tackwithvoco1WidgetState extends State<Talkwithvoco1> {
+class _vocogyan extends State<vocogyan> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -87,22 +89,27 @@ class _tackwithvoco1WidgetState extends State<Talkwithvoco1> {
                             child: SizedBox(
                                 child: ElevatedButton(
                               onPressed: () {
-                                // Navigator.push(
-                                //     context,
-                                //     new MaterialPageRoute(
-                                //         builder: (context) =>
-                                //             new Talkwithvoco2()));
+                                Navigator.push(
+                                    context,
+                                    new MaterialPageRoute(
+                                        builder: (context) => new Technical()));
                               },
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Icon(
-                                    Icons.lock,
-                                    color: Color.fromARGB(255, 0, 4, 253),
-                                    size: 80.0,
-                                  ), // icon
+                                  Container(
+                                    height: mediaQuery.size.height * 0.12,
+                                    width: mediaQuery.size.width * 0.6,
+                                    // color: Colors.black26,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/roboticsvoco.png'),
+                                      ),
+                                    ),
+                                  ),
                                   Text(
-                                    "Talk to VoCo Professional",
+                                    "Technical Courses ",
                                     style: GoogleFonts.lora(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -139,8 +146,7 @@ class _tackwithvoco1WidgetState extends State<Talkwithvoco1> {
                               Navigator.push(
                                   context,
                                   new MaterialPageRoute(
-                                      builder: (context) =>
-                                          new Talkwithvoco3()));
+                                      builder: (context) => new Technical()));
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -151,7 +157,7 @@ class _tackwithvoco1WidgetState extends State<Talkwithvoco1> {
                                   size: 80.0,
                                 ), // icon
                                 Text(
-                                  "Talk to VoCo Mitra",
+                                  "Non-Technical Courses",
                                   style: GoogleFonts.lora(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
